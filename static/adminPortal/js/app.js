@@ -13,7 +13,11 @@ var app =angular.module("expensemantainer",['ui.router'])
         templateUrl: "/adminPortal/partials/home/home.html",
         //controller: 'homeController'
       })
-
+       .state('signup', {
+        url: "/signup",
+        templateUrl: "/adminPortal/partials/signup/signup.html",
+        //controller: 'homeController'
+      })
     $urlRouterProvider.otherwise("/login");
     //$httpProvider.interceptors.push('httpInterceptor');
   })
