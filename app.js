@@ -4,7 +4,7 @@ var staticPath = path.resolve(__dirname, "static");
 
 var app = express();
 app.use(express.static(staticPath));
-app.set('port',(process.env.PORT||3000));
+app.set('port',(process.env.PORT||8000));
 
 
 // app.get('/',function(req,res)

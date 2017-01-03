@@ -1,7 +1,14 @@
 var app =angular.module("expensemantainer",['ui.router'])
 
-.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
+
+
+.config(function ($stateProvider, $urlRouterProvider, $httpProvider,$locationProvider) {
     //$urlRouterProvider.otherwise("/login");
+     $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    });
+
     $stateProvider
       .state('login', {
         url: "/login",
@@ -18,6 +25,7 @@ var app =angular.module("expensemantainer",['ui.router'])
         templateUrl: "/adminPortal/partials/signup/signup.html",
         //controller: 'homeController'
       })
+     
     $urlRouterProvider.otherwise("/login");
     //$httpProvider.interceptors.push('httpInterceptor');
   })
